@@ -2,6 +2,8 @@ import React from 'react';
 
 export default function App() {
     return (
-        <h1>Hello mate!</h1>
+        <div className="page__wrapper">
+            <h1>Hello mate!</h1>
+        </div>
     )
 }
