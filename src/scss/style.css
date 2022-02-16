@@ -23,3 +23,10 @@
       -ms-flex-direction: row;
           flex-direction: row;
 }
+
+.page__wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: url(http://localhost:3000/images/background.png);
+  background-position: center;
+}
