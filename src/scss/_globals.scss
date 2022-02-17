@@ -18,4 +18,21 @@
     height: 100vh;
     background: url(http://localhost:3000/images/background.png);
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question__container {
+    position: relative;
+}
+
+.footer__sign {
+    font-family: $montserrat;
+    font-weight: 500;
+    margin-top: 32px;
+    font-size: 14px;
+    line-height: 17px;
+    color: $offWhite;
 }
