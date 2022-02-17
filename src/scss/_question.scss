@@ -40,3 +40,19 @@
     line-height: 27px;
     
 }
+
+.next__btn {
+    background-color: $yellow;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+}
+
+.btn__text {
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: $white;
+    border-top: 16px;
+}

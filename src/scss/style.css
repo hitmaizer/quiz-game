@@ -99,3 +99,19 @@
   font-size: 18px;
   line-height: 27px;
 }
+
+.next__btn {
+  background-color: #F9A826;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+}
+
+.btn__text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #fff;
+  border-top: 16px;
+}
