@@ -30,6 +30,32 @@
   height: 100vh;
   background: url(http://localhost:3000/images/background.png);
   background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.question__container {
+  position: relative;
+}
+
+.footer__sign {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-top: 32px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F2F2F2;
 }
 
 .game__title {
@@ -38,4 +64,38 @@
   font-size: 36px;
   line-height: 54px;
   color: #F2F2F2;
+}
+
+.card__img {
+  position: absolute;
+  top: -60px;
+  left: 285px;
+}
+
+.card__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #2F527B;
+}
+
+.choices__wrapper {
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.choice__order {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.choice__text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
 }
