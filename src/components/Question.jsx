@@ -1,5 +1,6 @@
 import React from 'react'
-import StyledCard from '../scss/elements/StyledCard'
+import StyledCard from '../elements/StyledCard'
+import Choice from './Choice'
 
 export default function Question() {
     return (
@@ -8,7 +9,7 @@ export default function Question() {
             <img src="images/undraw_adventure_4hum.svg" alt="" />
             <StyledCard>
                 <h3 className="card__title">Kuala Lumpur is the capital of</h3>
-                
+                <Choice />
             </StyledCard>
         </div>
     )
