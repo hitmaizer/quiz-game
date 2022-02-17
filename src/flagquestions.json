@@ -1,0 +1,101 @@
+[
+    {
+        "flag": "https://countryflagsapi.com/svg/fiji",
+        "country": "Fiji",
+        "incorrect_answers": [
+            "Azerbaijan",
+            "Belize",
+            "Samoa"
+        ]
+    },
+    
+    {
+        "flag": "https://countryflagsapi.com/svg/ag",
+        "country": "Antigua And Barbuda",
+        "incorrect_answers": [
+            "San Marino",
+            "Seychelles",
+            "Indonesia"
+        ]
+    },
+    
+    {
+        "flag": "https://countryflagsapi.com/svg/pakistan",
+        "country": "Pakistan",
+        "incorrect_answers": [
+            "Nepal",
+            "South Sudan",
+            "Morocco"
+        ]
+    },
+    
+    {
+        "flag": "https://countryflagsapi.com/svg/slovakia",
+        "country": "Slovakia",
+        "incorrect_answers": [
+            "Slovenia",
+            "Estonia",
+            "Latvia"
+        ]
+    },
+    
+    {
+        "flag": "https://countryflagsapi.com/svg/uruguay",
+        "country": "Uruguay",
+        "incorrect_answers": [
+            "Argentina",
+            "El Salvador",
+            "Paraguay"
+        ]
+    },
+    
+    {
+        "flag": "https://countryflagsapi.com/svg/yemen",
+        "country": "Yemen",
+        "incorrect_answers": [
+            "Pakistan",
+            "Afghanistan",
+            "Iran"
+        ]
+    },
+    
+    {
+        "flag": "https://countryflagsapi.com/svg/cambodia",
+        "country": "Cambodia",
+        "incorrect_answers": [
+            "Taiwan",
+            "Laos",
+            "Malaysia"
+        ]
+    },
+    
+    {
+        "flag": "https://countryflagsapi.com/svg/hk",
+        "country": "Hong Kong",
+        "incorrect_answers": [
+            "Macau",
+            "Taiwan",
+            "Vietnam"
+        ]
+    },
+    
+    {
+        "flag": "https://countryflagsapi.com/svg/hungary",
+        "country": "Hungary",
+        "incorrect_answers": [
+            "Bulgaria",
+            "Tajikistan",
+            "Iran"
+        ]
+    },
+    
+    {
+        "flag": "https://countryflagsapi.com/svg/lebanon",
+        "country": "Lebanon",
+        "incorrect_answers": [
+            "Cyprus",
+            "Austria",
+            "Canada"
+        ]
+    }
+]
