@@ -6,10 +6,15 @@ export default function Question() {
     return (
         <div className="question__container">
             <h1 className="game__title">Country Quiz</h1>
-            <img src="images/undraw_adventure_4hum.svg" alt="" />
+            <img src="images/undraw_adventure_4hum.svg" alt="" className="card__img" />
             <StyledCard>
                 <h3 className="card__title">Kuala Lumpur is the capital of</h3>
-                <Choice />
+                <div className="choices__wrapper flex-col">
+                    <Choice />
+                    <Choice />
+                    <Choice />
+                    <Choice />
+                </div>
             </StyledCard>
         </div>
     )
