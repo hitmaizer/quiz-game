@@ -15,6 +15,9 @@ export default function Question() {
                     <Choice />
                     <Choice />
                 </div>
+                <button className="next__btn">
+                    <span className="btn__text">Next</span>    
+                </button>
             </StyledCard>
         </div>
     )
