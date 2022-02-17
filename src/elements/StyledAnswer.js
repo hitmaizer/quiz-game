@@ -13,4 +13,9 @@ export default styled.button`
     width: 400px;
     height: 56px;
     cursor: pointer;
+    &:hover {
+        background-color: ${(props) => props.theme.colors.yellow};
+        border: solid 2px ${(props) => props.theme.colors.yellow};
+        color: ${(props) => props.theme.colors.white};
+    }
 ` 
