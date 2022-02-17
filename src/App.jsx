@@ -5,8 +5,14 @@ import Quote from './components/Question';
 import Data from './data.json'
 
 
+
 export default function App() {
     const [allData, setAllData] = React.useState([])
+    const [currentQuestion, setCurrentQuestion] = React.useState({
+        flag: "",
+        country: "",
+        allAnswers: [],
+    })
 
     React.useEffect(() => {
         const selectedData = Data.map(item => {
