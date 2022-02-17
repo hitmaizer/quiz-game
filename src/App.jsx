@@ -9,7 +9,7 @@ export default function App() {
         <ThemeProvider theme={Theme}>
             <div className="page__wrapper">
                 <Quote />
-                
+                <footer className="footer__sign">created by <u><b>Jose Alves</b></u> - devChallenges.io</footer>
             </div>
         </ThemeProvider>
     )
