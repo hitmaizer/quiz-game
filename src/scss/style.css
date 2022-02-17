@@ -105,6 +105,9 @@
   border: none;
   border-radius: 12px;
   padding: 1rem 2rem;
+  margin-top: 32px;
+  width: 100%;
+  cursor: pointer;
 }
 
 .btn__text {
@@ -113,5 +116,4 @@
   font-size: 18px;
   line-height: 27px;
   color: #fff;
-  border-top: 16px;
 }
