@@ -8,7 +8,10 @@ export default function Question(props) {
             <h1 className="game__title">Country Quiz</h1>
             <img src="images/undraw_adventure_4hum.svg" alt="" className="card__img" />
             <StyledCard>
-                <h3 className="card__title">Kuala Lumpur is the capital of</h3>
+                <h3 className="card__title">{props.state === 1 ? "What country is this flag from?" : "test"}</h3>
+                
+                {props.state === 1 && 
+                <img src={props.currentQuestion.flag} alt=""/>}
                 <div className="choices__wrapper flex-col">
                     <Choice currentQuestion={props.currentQuestion}/>
                     <Choice currentQuestion={props.currentQuestion}/>
