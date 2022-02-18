@@ -93,6 +93,13 @@
   color: #2F527B;
 }
 
+.card__flag {
+  margin-top: 16px;
+  max-width: 100%;
+  width: 100px;
+  border-radius: 4px;
+}
+
 .choices__wrapper {
   gap: 24px;
   margin-top: 32px;
