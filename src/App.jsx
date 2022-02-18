@@ -45,12 +45,10 @@ export default function App() {
 
     function getFlagQuestion() {
         const randomQuestion = Math.floor(Math.random() * flagQuestions.length)
-        let thisQuestion = [flagQuestions[randomQuestion]]
-        const flagQuestion = thisQuestion.map(item => {
-            return {...item, allAnswers: [...item.incorrect_answers, item.country]}
-        })
-        console.log(flagQuestion)
-        setCurrentQuestion(flagQuestion)
+        let thisQuestion = flagQuestions[randomQuestion]
+        console.log(thisQuestion)
+        thisQuestion.allAnswers = [...thisQuestion.incorrect_answers, thisQuestion.country]
+        setCurrentQuestion(thisQuestion)
         setGameState(1)
     }
 
