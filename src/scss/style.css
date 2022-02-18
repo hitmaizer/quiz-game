@@ -61,6 +61,11 @@
 .intro__wrapper {
   gap: 32px;
   padding: 64px;
+  width: 400px;
+  height: 200px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .gamepicker__btn {
@@ -142,4 +147,9 @@
   font-size: 18px;
   line-height: 27px;
   color: #fff;
+}
+
+.correct__answer {
+  background-color: #60BF88;
+  color: #F2F2F2;
 }
