@@ -15,17 +15,26 @@ export default function Question(props) {
             <h1 className="game__title">Country Quiz</h1>
             <img src="images/undraw_adventure_4hum.svg" alt="" className="card__img" />
             <StyledCard>
-                <h3 className="card__title">{props.state === 1 ? "What country is this flag from?" : "test"}</h3>
+                <h3 className="card__title">{props.state === 1 ? "What country is this flag from?" : ""}</h3>
                 
                 {props.state === 1 && 
-                <img src={props.currentQuestion.flag} alt="" className="card__flag"/>}
-                <div className="choices__wrapper flex-col">
-                    {choiceElements}
-                    
-                </div>
-                <button className="next__btn" >
-                    <span className="btn__text">Next</span>    
-                </button>
+                <img src={props.currentQuestion.flag} alt="" className="card__flag"/>
+                }
+                
+                {props.state === 1 && <>
+                    <div className="choices__wrapper flex-col">
+                        {choiceElements}
+                        
+                    </div>
+                    <button className="next__btn" >
+                        <span className="btn__text">Next</span>    
+                    </button>
+                </>
+                }
+
+               
+                
+                
             </StyledCard>
         </div>
     )
