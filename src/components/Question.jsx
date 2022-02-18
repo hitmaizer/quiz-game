@@ -1,10 +1,15 @@
 import React from 'react'
 import StyledCard from '../elements/StyledCard'
 import Choice from './Choice'
+import { nanoid } from 'nanoid'
+
 
 export default function Question(props) {
 
     
+    
+    const choiceElements = props.currentQuestion.allAnswers.map(item => <Choice key={nanoid()} text={item} order={props.currentQuestion.order} />)
+    console.log(choiceElements)
 
     return (
         <div className="question__container">
@@ -16,12 +21,10 @@ export default function Question(props) {
                 {props.state === 1 && 
                 <img src={props.currentQuestion.flag} alt="" className="card__flag"/>}
                 <div className="choices__wrapper flex-col">
-                    <Choice currentQuestion={props.currentQuestion}/>
-                    <Choice currentQuestion={props.currentQuestion}/>
-                    <Choice currentQuestion={props.currentQuestion}/>
-                    <Choice currentQuestion={props.currentQuestion}/>
+                    {choiceElements}
+                    
                 </div>
-                <button className="next__btn">
+                <button className="next__btn" >
                     <span className="btn__text">Next</span>    
                 </button>
             </StyledCard>
