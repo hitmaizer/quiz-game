@@ -5,10 +5,11 @@ import Question from './components/Question';
 import Data from './data.json'
 import FlagQuestions from './flagquestions.json'
 import Intro from './components/Intro';
+import GameOver from './components/GameOver'
 
 
 export default function App() {
-    const [gameState, setGameState] = React.useState(0)
+    const [gameState, setGameState] = React.useState(2)
     const [allData, setAllData] = React.useState([])
     const [flagQuestions, setFlagQuestions] = React.useState([])
     const [result, setResult] = React.useState(0)
@@ -64,7 +65,7 @@ export default function App() {
     }
 
     function selectAnswer(answer, id) {
-        // const selectedElement = document.getElementbyId(id)
+        
         
 
         setCurrentQuestion(oldQuestion => {
@@ -77,6 +78,11 @@ export default function App() {
         }
         
         
+    }
+
+    function resetGame() {
+        setGameState(0)
+        setResult(0)
     }
 
 
@@ -95,7 +101,15 @@ export default function App() {
                 currentQuestion={currentQuestion} 
                 state={gameState} 
                 selectAnswer={selectAnswer}
-                getFlag={getFlagQuestion} />} 
+                getFlag={getFlagQuestion} />}
+
+            {gameState === 2 && 
+                <div >
+                    <GameOver 
+                    result={result}
+                    resetGame={resetGame} />
+                </div> 
+            } 
                 
                 <footer className="footer__sign">created by <u><b>Jose Alves</b></u> - devChallenges.io</footer>
             </ThemeProvider>
