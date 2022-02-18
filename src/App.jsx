@@ -64,8 +64,8 @@ export default function App() {
     }
 
     function selectAnswer(answer, id) {
-        const selectedElement = document.getElementbyId(id)
-        console.log(selectedElement)
+        // const selectedElement = document.getElementbyId(id)
+        
 
         setCurrentQuestion(oldQuestion => {
             return {...oldQuestion, userInput: answer}
