@@ -2,7 +2,7 @@ import React from 'react'
 import StyledCard from '../elements/StyledCard'
 import Choice from './Choice'
 
-export default function Question() {
+export default function Question(props) {
     return (
         <div className="question__container">
             <h1 className="game__title">Country Quiz</h1>
@@ -10,10 +10,10 @@ export default function Question() {
             <StyledCard>
                 <h3 className="card__title">Kuala Lumpur is the capital of</h3>
                 <div className="choices__wrapper flex-col">
-                    <Choice />
-                    <Choice />
-                    <Choice />
-                    <Choice />
+                    <Choice currentQuestion={props.currentQuestion}/>
+                    <Choice currentQuestion={props.currentQuestion}/>
+                    <Choice currentQuestion={props.currentQuestion}/>
+                    <Choice currentQuestion={props.currentQuestion}/>
                 </div>
                 <button className="next__btn">
                     <span className="btn__text">Next</span>    
