@@ -3,11 +3,12 @@ import { ThemeProvider } from 'styled-components';
 import Theme from './theme/Theme';
 import Quote from './components/Question';
 import Data from './data.json'
-
+import FlagQuestions from './flagquestions.json'
 
 
 export default function App() {
     const [allData, setAllData] = React.useState([])
+    const [flagQuestions, setFlagQuestions] = React.useState([])
     const [currentQuestion, setCurrentQuestion] = React.useState({
         flag: "",
         country: "",
@@ -23,9 +24,10 @@ export default function App() {
         })
         
         setAllData(selectedData)
+        setFlagQuestions(FlagQuestions)
     }, [])
 
-    console.log(allData)
+    console.log(FlagQuestions)
 
     return (
         <ThemeProvider theme={Theme}>
