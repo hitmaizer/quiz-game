@@ -51,6 +51,7 @@ export default function App() {
     }
 
     
+    
     function getCapitalQuestion() {
         //isto vai ter q ir buscar um molhe merdas
     }
@@ -64,20 +65,26 @@ export default function App() {
         setGameState(1)
     }
 
-    function selectAnswer(answer, id) {
-        
-        
+    console.log(result)
 
+    function selectAnswer(answer, id) {
         setCurrentQuestion(oldQuestion => {
             return {...oldQuestion, userInput: answer}
-        })
+        });
+    }
 
-        if(currentQuestion.userInput === currentQuestion.country) {
+    function nextQuestion() {
+        if (currentQuestion.userInput === currentQuestion.country) {
 
-            setResult(result + 1)
+            setResult(oldResult => {
+                return oldResult + 1
+            })
+            
+            getFlagQuestion()
+            
+        } else {
+            setGameState(2)
         }
-        
-        
     }
 
     function resetGame() {
@@ -101,7 +108,8 @@ export default function App() {
                 currentQuestion={currentQuestion} 
                 state={gameState} 
                 selectAnswer={selectAnswer}
-                getFlag={getFlagQuestion} />}
+                getFlag={getFlagQuestion}
+                nextQuestion={nextQuestion} />}
 
             {gameState === 2 && 
                 <div >
