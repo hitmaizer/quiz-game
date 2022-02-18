@@ -31,14 +31,24 @@ export default function App() {
         
         setAllData(selectedData)
         
-        
-        
-
     }, [flagQuestions])
 
-    //console.log(currentQuestion)
-    
+    function shuffle(oldAnswers) {
+        let array = oldAnswers
+        let currentIndex = array.length,  randomIndex;
+        // While there remain elements to shuffle...
+        while (currentIndex !== 0) {
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+        return array;
+    }
 
+    
     function getCapitalQuestion() {
         //isto vai ter q ir buscar um molhe merdas
     }
@@ -46,25 +56,32 @@ export default function App() {
     function getFlagQuestion() {
         const randomQuestion = Math.floor(Math.random() * flagQuestions.length)
         let thisQuestion = flagQuestions[randomQuestion]
-        console.log(thisQuestion)
-        thisQuestion.allAnswers = [...thisQuestion.incorrect_answers, thisQuestion.country]
+        thisQuestion.allAnswers = shuffle([...thisQuestion.incorrect_answers, thisQuestion.country])
+        thisQuestion.order = ["a", "b", "c", "d"]
         setCurrentQuestion(thisQuestion)
         setGameState(1)
     }
 
-    //console.log(FlagQuestions)
-
-    
+    function selectAnswer(e) {
+        console.log(e)
+    }
 
     return (
         
         <div className="page__wrapper">
+            <ThemeProvider theme={Theme}>
+            
             {gameState === 0 && 
                 <div>
                     <Intro getFlag={getFlagQuestion}/>
                 </div>}
-            <ThemeProvider theme={Theme}>
-            {gameState === 1 && <Question currentQuestion={currentQuestion} state={gameState} />} 
+                
+            {gameState === 1 && 
+                <Question 
+                currentQuestion={currentQuestion} 
+                state={gameState} 
+                selectAnswer={selectAnswer}
+                getFlag={getFlagQuestion} />} 
                 
                 <footer className="footer__sign">created by <u><b>Jose Alves</b></u> - devChallenges.io</footer>
             </ThemeProvider>
