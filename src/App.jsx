@@ -53,9 +53,23 @@ export default function App() {
     
     
     function getCapitalQuestion() {
-        //isto vai ter q ir buscar um molhe merdas
+        // random index const
+        const randomQuestion = Math.floor(Math.random() * allData.length)
+        // allData[random]--> capital, country
+        let thisQuestion = allData[randomQuestion]
+        thisQuestion.allAnswers = [thisQuestion.capital]
+        // for loop i < 3 -> allData[random].capital
+        for (let i = 0; i < 3; i++) {
+            const randomCapital = Math.floor(Math.random() * allData.length)
+            let fakeCapital = allData[randomCapital].capital
+            // allAnswers -> 3 randoms + capital
+            thisQuestion.allAnswers.push(fakeCapital)
+        }
+        setCurrentQuestion(thisQuestion)
+        setGameState(1)
     }
-
+    console.log(currentQuestion)
+    
     function getFlagQuestion() {
         const randomQuestion = Math.floor(Math.random() * flagQuestions.length)
         let thisQuestion = flagQuestions[randomQuestion]
@@ -104,7 +118,10 @@ export default function App() {
             
             {gameState === 0 && 
                 <div>
-                    <Intro getFlag={getFlagQuestion}/>
+                    <Intro 
+                    getFlag={getFlagQuestion}
+                    getCapital={getCapitalQuestion} 
+                    />
                 </div>}
                 
             {gameState === 1 && 
@@ -113,6 +130,7 @@ export default function App() {
                 state={gameState} 
                 selectAnswer={selectAnswer}
                 getFlag={getFlagQuestion}
+                getCapital={getCapitalQuestion}
                 nextQuestion={nextQuestion}
                 confirmQuestion={confirmQuestion} />}
             
