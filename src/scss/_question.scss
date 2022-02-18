@@ -25,6 +25,8 @@
     max-width: 100%;
     width: 150px;
     border-radius: 4px;
+    box-shadow: 0px 4px 24px 0px #0000001A;
+
 }
 
 .choices__wrapper {
@@ -32,12 +34,10 @@
     margin-top: 32px;
 }
 
-.choice__order {
-    font-family: $poppins;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
-    text-transform: uppercase;
+.choice__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .choice__text {

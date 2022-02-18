@@ -98,6 +98,8 @@
   max-width: 100%;
   width: 150px;
   border-radius: 4px;
+  -webkit-box-shadow: 0px 4px 24px 0px #0000001A;
+          box-shadow: 0px 4px 24px 0px #0000001A;
 }
 
 .choices__wrapper {
@@ -105,12 +107,16 @@
   margin-top: 32px;
 }
 
-.choice__order {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
-  text-transform: uppercase;
+.choice__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .choice__text {
