@@ -11,6 +11,7 @@ export default function App() {
     const [gameState, setGameState] = React.useState(0)
     const [allData, setAllData] = React.useState([])
     const [flagQuestions, setFlagQuestions] = React.useState([])
+    const [result, setResult] = React.useState(0)
     const [currentQuestion, setCurrentQuestion] = React.useState({
         flag: "",
         country: "",
@@ -57,20 +58,27 @@ export default function App() {
         const randomQuestion = Math.floor(Math.random() * flagQuestions.length)
         let thisQuestion = flagQuestions[randomQuestion]
         thisQuestion.allAnswers = shuffle([...thisQuestion.incorrect_answers, thisQuestion.country])
-        thisQuestion.order = ["a", "b", "c", "d"]
         thisQuestion.userInput = ""
         setCurrentQuestion(thisQuestion)
         setGameState(1)
     }
 
-    function selectAnswer(answer) {
+    function selectAnswer(answer, id) {
+        const selectedElement = document.getElementbyId(id)
+        console.log(selectedElement)
+
         setCurrentQuestion(oldQuestion => {
             return {...oldQuestion, userInput: answer}
         })
+
+        if(currentQuestion.userInput === currentQuestion.country) {
+
+            setResult(result + 1)
+        }
+        
         
     }
-    
-    console.log(currentQuestion)
+
 
     return (
         
