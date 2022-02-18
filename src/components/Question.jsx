@@ -8,7 +8,7 @@ export default function Question(props) {
 
     
     
-    const choiceElements = props.currentQuestion.allAnswers.map(item => <Choice key={nanoid()} text={item} selectAnswer={props.selectAnswer}/>)
+    const choiceElements = props.currentQuestion.allAnswers.map(item => <Choice key={nanoid()} text={item} selectAnswer={props.selectAnswer} id={nanoid()}/>)
     
     return (
         <div className="question__container">
