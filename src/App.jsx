@@ -65,12 +65,16 @@ export default function App() {
         setGameState(1)
     }
 
-    console.log(result)
+    
 
     function selectAnswer(answer, id) {
         setCurrentQuestion(oldQuestion => {
             return {...oldQuestion, userInput: answer}
         });
+    }
+
+    function confirmQuestion() {
+        setGameState(3)
     }
 
     function nextQuestion() {
@@ -79,7 +83,7 @@ export default function App() {
             setResult(oldResult => {
                 return oldResult + 1
             })
-            
+
             getFlagQuestion()
             
         } else {
@@ -109,7 +113,17 @@ export default function App() {
                 state={gameState} 
                 selectAnswer={selectAnswer}
                 getFlag={getFlagQuestion}
-                nextQuestion={nextQuestion} />}
+                nextQuestion={nextQuestion}
+                confirmQuestion={confirmQuestion} />}
+            
+            {gameState === 3 && 
+                <Question 
+                currentQuestion={currentQuestion} 
+                state={gameState} 
+                selectAnswer={selectAnswer}
+                getFlag={getFlagQuestion}
+                nextQuestion={nextQuestion}
+                confirmQuestion={confirmQuestion} />}
 
             {gameState === 2 && 
                 <div >
