@@ -6,9 +6,46 @@ import { nanoid } from 'nanoid'
 
 export default function Question(props) {
 
+    const answerStyles = {
+        selected: {
+            border: "solid 2px transparent",
+            backgroundColor: "#F9A826",
+            color: "white",
+
+        },
+
+        unselected: {
+            border: "solid 2px #6066D0CC",
+            color: "#6066D0CC",
+            
+        }
+    }
+
     
     
-    const choiceElements = props.currentQuestion.allAnswers.map(item => <Choice key={nanoid()} text={item} selectAnswer={props.selectAnswer} id={nanoid()}/>)
+    const choiceElements = props.currentQuestion.allAnswers.map(item => {
+        let obj = {}
+        if(props.state === 1) {
+            obj = (item === props.currentQuestion.userInput) ? {
+                style: {...answerStyles.selected}
+            } 
+            : {
+                style: {...answerStyles.unselected}
+            }
+        }
+
+        console.log(obj)
+        return (
+            <Choice 
+            
+            key={nanoid()} 
+            text={item} 
+            selectAnswer={props.selectAnswer} 
+            id={nanoid()}
+            style={obj}
+            />
+        )
+    })
     
     return (
         <div className="question__container">
