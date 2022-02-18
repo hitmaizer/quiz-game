@@ -15,7 +15,7 @@ export default function App() {
         flag: "",
         country: "",
         allAnswers: [],
-        userInput: ""
+        
     })
 
     React.useEffect(() => {
@@ -58,13 +58,19 @@ export default function App() {
         let thisQuestion = flagQuestions[randomQuestion]
         thisQuestion.allAnswers = shuffle([...thisQuestion.incorrect_answers, thisQuestion.country])
         thisQuestion.order = ["a", "b", "c", "d"]
+        thisQuestion.userInput = ""
         setCurrentQuestion(thisQuestion)
         setGameState(1)
     }
 
-    function selectAnswer(e) {
-        console.log(e)
+    function selectAnswer(answer) {
+        setCurrentQuestion(oldQuestion => {
+            return {...oldQuestion, userInput: answer}
+        })
+        
     }
+    
+    console.log(currentQuestion)
 
     return (
         
