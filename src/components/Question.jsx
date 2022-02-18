@@ -8,9 +8,8 @@ export default function Question(props) {
 
     
     
-    const choiceElements = props.currentQuestion.allAnswers.map(item => <Choice key={nanoid()} text={item} order={props.currentQuestion.order} />)
-    console.log(choiceElements)
-
+    const choiceElements = props.currentQuestion.allAnswers.map(item => <Choice key={nanoid()} text={item} selectAnswer={props.selectAnswer}/>)
+    
     return (
         <div className="question__container">
             <h1 className="game__title">Country Quiz</h1>
