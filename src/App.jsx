@@ -19,6 +19,8 @@ export default function App() {
     })
 
     React.useEffect(() => {
+        setFlagQuestions(FlagQuestions)
+        
         const selectedData = Data.map(item => {
             return {
                 name: item.name, 
@@ -28,13 +30,13 @@ export default function App() {
         })
         
         setAllData(selectedData)
-        setFlagQuestions(FlagQuestions)
-        const randomQuestion = Math.floor(Math.random() * flagQuestions.length)
-        setCurrentQuestion(flagQuestions[randomQuestion])
+        
+        
+        
 
     }, [flagQuestions])
 
-    console.log(currentQuestion)
+    //console.log(currentQuestion)
     
 
     function getCapitalQuestion() {
@@ -43,25 +45,28 @@ export default function App() {
 
     function getFlagQuestion() {
         const randomQuestion = Math.floor(Math.random() * flagQuestions.length)
-        setCurrentQuestion(flagQuestions[randomQuestion])
-        
+        let thisQuestion = [flagQuestions[randomQuestion]]
+        const flagQuestion = thisQuestion.map(item => {
+            return {...item, allAnswers: [...item.incorrect_answers, item.country]}
+        })
+        console.log(flagQuestion)
+        setCurrentQuestion(flagQuestion)
+        setGameState(1)
     }
 
     //console.log(FlagQuestions)
 
-    function stateChanger(int) {
-        setGameState(int)
-    }
+    
 
     return (
         
         <div className="page__wrapper">
             {gameState === 0 && 
                 <div>
-                    <Intro stateChanger={stateChanger}/>
+                    <Intro getFlag={getFlagQuestion}/>
                 </div>}
             <ThemeProvider theme={Theme}>
-            {gameState === 1 && <Question currentQuestion={currentQuestion} />} 
+            {gameState === 1 && <Question currentQuestion={currentQuestion} state={gameState} />} 
                 
                 <footer className="footer__sign">created by <u><b>Jose Alves</b></u> - devChallenges.io</footer>
             </ThemeProvider>
