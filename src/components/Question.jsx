@@ -26,7 +26,7 @@ export default function Question(props) {
                         {choiceElements}
                         
                     </div>
-                    <button className="next__btn" >
+                    <button className="next__btn" onClick={props.nextQuestion} >
                         <span className="btn__text">Next</span>    
                     </button>
                 </>
