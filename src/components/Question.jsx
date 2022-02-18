@@ -45,7 +45,7 @@ export default function Question(props) {
                 style: {...answerStyles.unselected}
             }
         } else if (props.state === 3) {
-            if (item === props.currentQuestion.country) {
+            if (item === props.currentQuestion.country || item === props.currentQuestion.name) {
                 obj = {
                     style: {...answerStyles.correct}
                 }
@@ -78,7 +78,7 @@ export default function Question(props) {
             <h1 className="game__title">Country Quiz</h1>
             <img src="images/undraw_adventure_4hum.svg" alt="" className="card__img" />
             <StyledCard>
-                <h3 className="card__title">{props.state === 1 ? "What country is this flag from?" : ""}</h3>
+                <h3 className="card__title">{props.currentQuestion.flag ? "What country is this flag from?" : `What is the capital of ${props.currentQuestion.name}?`}</h3>
                 
                 {props.state === 1 && 
                 <img src={props.currentQuestion.flag} alt="" className="card__flag"/>

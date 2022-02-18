@@ -68,6 +68,7 @@ export default function App() {
         setCurrentQuestion(thisQuestion)
         setGameState(1)
     }
+
     console.log(currentQuestion)
     
     function getFlagQuestion() {
