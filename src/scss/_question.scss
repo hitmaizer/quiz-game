@@ -71,3 +71,63 @@
     background-color: $succeed;
     color: $offWhite;
 }
+
+.gameover__btn {
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    margin-top: 32px;
+    width: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    border: solid 2px $darkBlue;
+    
+
+    &:hover {
+        background-color: $yellow;
+        border: solid 2px transparent;
+        .nextbtn__text {
+            color: $offWhite;
+        }
+
+    }
+}
+
+.nextbtn__text {
+    font-family: $poppins;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: $darkBlue;
+    
+}
+
+.gameover__wrapper {
+    display: flex !important;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.gameover__title {
+    font-family: $poppins;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    color: $grayBlue;
+}
+
+.gameover__text {
+    font-family: $poppins;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: $grayBlue;
+    text-align: center;
+}
+
+.results__txt{
+    font-family: $poppins;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: $succeed;
+}
