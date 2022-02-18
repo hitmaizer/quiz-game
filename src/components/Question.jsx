@@ -60,7 +60,7 @@ export default function Question(props) {
             }
         }
 
-        console.log(props.currentQuestion)
+        
         return (
             <Choice 
             
@@ -83,7 +83,7 @@ export default function Question(props) {
                 {props.state === 1 && 
                 <img src={props.currentQuestion.flag} alt="" className="card__flag"/>
                 }
-                
+
                 {props.state === 3 && 
                 <img src={props.currentQuestion.flag} alt="" className="card__flag"/>
                 }
