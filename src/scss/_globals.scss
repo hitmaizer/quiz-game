@@ -4,8 +4,8 @@
 }
 
 .flex-col {
-    display: flex;
-    flex-direction: column;
+    display: flex!important;
+    flex-direction: column!important;
 }
 
 .flex-row {
@@ -35,4 +35,17 @@
     font-size: 14px;
     line-height: 17px;
     color: $offWhite;
+}
+
+.intro__wrapper {
+    gap: 32px;
+    padding: 64px;
+}
+
+.gamepicker__btn {
+    border: none;
+    border-radius: 12px;
+    background-color: $darkBlue;
+    padding: 1rem 2rem;
+    cursor: pointer;
 }
