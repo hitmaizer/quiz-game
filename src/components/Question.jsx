@@ -37,6 +37,7 @@ export default function Question(props) {
         
     const choiceElements = props.currentQuestion.allAnswers.map(item => {
         let obj = {}
+        console.log(item)
         if(props.state === 1) {
             obj = (item === props.currentQuestion.userInput) ? {
                 style: {...answerStyles.selected}
@@ -45,7 +46,7 @@ export default function Question(props) {
                 style: {...answerStyles.unselected}
             }
         } else if (props.state === 3) {
-            if (item === props.currentQuestion.country || item === props.currentQuestion.name) {
+            if (item === props.currentQuestion.capital || item === props.currentQuestion.country) {
                 obj = {
                     style: {...answerStyles.correct}
                 }
@@ -60,6 +61,7 @@ export default function Question(props) {
             }
         }
 
+        console.log(props.state)
         
         return (
             <Choice 
