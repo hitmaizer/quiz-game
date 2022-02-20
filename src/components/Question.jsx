@@ -37,7 +37,6 @@ export default function Question(props) {
         
     const choiceElements = props.currentQuestion.allAnswers.map(item => {
         let obj = {}
-        console.log(item)
         if(props.state === 1) {
             obj = (item === props.currentQuestion.userInput) ? {
                 style: {...answerStyles.selected}
@@ -64,14 +63,17 @@ export default function Question(props) {
         console.log(props.state)
         
         return (
-            <Choice 
-            
-            key={nanoid()} 
-            text={item} 
-            selectAnswer={props.selectAnswer} 
-            id={nanoid()}
-            style={obj}
-            />
+            <>
+                <Choice 
+                key={nanoid()} 
+                text={item} 
+                selectAnswer={props.selectAnswer} 
+                id={nanoid()}
+                style={obj}
+                state={props.state}
+                />
+                
+            </>
         )
     })
     
@@ -104,7 +106,7 @@ export default function Question(props) {
                     <div className="choices__wrapper flex-col">
                         {choiceElements}
                     </div>
-                    <button className="next__btn" onClick={props.nextQuestion} >
+                    <button className="nextquestion__btn" onClick={props.nextQuestion} >
                         <span className="btn__text">Next</span>    
                     </button>
                 </>}
