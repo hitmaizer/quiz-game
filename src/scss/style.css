@@ -61,8 +61,6 @@
 .intro__wrapper {
   gap: 32px;
   padding: 64px;
-  width: 400px;
-  height: 200px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -133,6 +131,16 @@
 
 .next__btn {
   background-color: #F9A826;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  margin-top: 32px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.nextquestion__btn {
+  background-color: #2F527B;
   border: none;
   border-radius: 12px;
   padding: 1rem 2rem;
@@ -215,4 +223,13 @@
   font-size: 36px;
   line-height: 54px;
   color: #60BF88;
+}
+
+.intro__header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #2F527B;
+  max-width: 300px;
 }
