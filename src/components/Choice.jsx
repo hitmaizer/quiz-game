@@ -2,7 +2,7 @@ import React from 'react';
 import StyledAnswer from '../elements/StyledAnswer';
 import { CheckCircle } from '@styled-icons/bootstrap/CheckCircle'
 import { XCircle } from '@styled-icons/bootstrap/XCircle'
-import { nanoid } from 'nanoid'
+
 
 export default function Choice(props) {
     
