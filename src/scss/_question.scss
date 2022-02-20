@@ -59,6 +59,16 @@
     cursor: pointer;
 }
 
+.nextquestion__btn {
+    background-color: $darkBlue;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    margin-top: 32px;
+    width: 100%;
+    cursor: pointer;
+}
+
 .btn__text {
     font-family: $poppins;
     font-weight: 500;
@@ -131,4 +141,13 @@
     font-size: 36px;
     line-height: 54px;
     color: $succeed;
+}
+
+.intro__header {
+    font-family: $poppins;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: $darkBlue;
+    max-width: 300px;
 }
