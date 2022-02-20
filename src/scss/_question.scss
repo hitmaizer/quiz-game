@@ -39,6 +39,7 @@
     justify-content: center;
     align-items: center;
     
+    
 }
 
 .choice__text {
@@ -46,6 +47,8 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
+    flex: 1;
+    text-align: justify;
     
 }
 

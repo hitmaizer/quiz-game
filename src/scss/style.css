@@ -127,6 +127,10 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: justify;
 }
 
 .next__btn {
