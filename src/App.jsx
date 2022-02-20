@@ -61,6 +61,7 @@ export default function App() {
         if(thisQuestion.capital !== "") {
             thisQuestion.allAnswers = [thisQuestion.capital]
         } else {
+            // eslint-disable-next-line no-unused-vars
             let thisQuestion = allData[randomQuestion]
         }
         thisQuestion.isFlagQuestion = false
@@ -71,6 +72,7 @@ export default function App() {
             if(fakeCapital !== "") {
                 thisQuestion.allAnswers.push(fakeCapital)
             } else {
+                // eslint-disable-next-line no-unused-vars
                 let fakeCapital = allData[randomCapital].capital
             }
             // allAnswers -> 3 randoms + capital
