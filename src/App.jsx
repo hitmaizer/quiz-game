@@ -58,6 +58,7 @@ export default function App() {
         // allData[random]--> capital, country
         let thisQuestion = allData[randomQuestion]
         thisQuestion.allAnswers = [thisQuestion.capital]
+        thisQuestion.isFlagQuestion = false
         // for loop i < 3 -> allData[random].capital
         for (let i = 0; i < 3; i++) {
             const randomCapital = Math.floor(Math.random() * allData.length)
@@ -76,6 +77,7 @@ export default function App() {
         let thisQuestion = flagQuestions[randomQuestion]
         thisQuestion.allAnswers = shuffle([...thisQuestion.incorrect_answers, thisQuestion.country])
         thisQuestion.userInput = ""
+        thisQuestion.isFlagQuestion = true
         setCurrentQuestion(thisQuestion)
         setGameState(1)
     }
@@ -93,13 +95,17 @@ export default function App() {
     }
 
     function nextQuestion() {
-        if (currentQuestion.userInput === currentQuestion.country) {
+        if (currentQuestion.userInput === currentQuestion.country || currentQuestion.userInput === currentQuestion.capital) {
 
             setResult(oldResult => {
                 return oldResult + 1
             })
 
-            getFlagQuestion()
+            if (currentQuestion.isFlagQuestion === false) {
+                getFlagQuestion()
+            } else {
+                getCapitalQuestion()
+            }
             
         } else {
             setGameState(2)
