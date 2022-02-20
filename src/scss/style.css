@@ -28,8 +28,9 @@
 .page__wrapper {
   width: 100vw;
   height: 100vh;
-  background: url(http://localhost:3000/images/background.png);
-  background-position: center;
+  background: url("https://i.ibb.co/Nmg6rLV/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
