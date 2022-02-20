@@ -8,6 +8,7 @@ import Intro from './components/Intro';
 import GameOver from './components/GameOver'
 
 
+
 export default function App() {
     const [gameState, setGameState] = React.useState(0)
     const [allData, setAllData] = React.useState([])
@@ -63,9 +64,15 @@ export default function App() {
         for (let i = 0; i < 3; i++) {
             const randomCapital = Math.floor(Math.random() * allData.length)
             let fakeCapital = allData[randomCapital].capital
+            if(fakeCapital !== "") {
+                thisQuestion.allAnswers.push(fakeCapital)
+            } else {
+                let fakeCapital = allData[randomCapital].capital
+            }
             // allAnswers -> 3 randoms + capital
-            thisQuestion.allAnswers.push(fakeCapital)
         }
+        shuffle(thisQuestion.allAnswers)
+        console.log(thisQuestion)
         setCurrentQuestion(thisQuestion)
         setGameState(1)
     }
