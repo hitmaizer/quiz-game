@@ -71,6 +71,7 @@ export default function Question(props) {
                 id={nanoid()}
                 style={obj}
                 state={props.state}
+                currentQuestion={props.currentQuestion}
                 />
                 
             </>
