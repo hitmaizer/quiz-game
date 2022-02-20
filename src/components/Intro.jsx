@@ -6,11 +6,9 @@ export default function Intro(props) {
         <>
             <h1 className="game__title">Country Quiz</h1>
             <StyledCard className="intro__wrapper flex-col">
-                <button className="gamepicker__btn" onClick={props.getFlag}>
-                    <span className="btn__text">Flag Game</span>
-                </button>
+                <h3 className="intro__header">Welcome to the Country Quiz! Answer correctly and see how many in a row you can get!</h3>
                 <button className="gamepicker__btn" onClick={props.getCapital}>
-                    <span className="btn__text">Capitals Game</span>
+                    <span className="btn__text">Start Game</span>
                 </button>
             </StyledCard>
         </>
