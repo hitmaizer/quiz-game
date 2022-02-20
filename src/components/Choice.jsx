@@ -18,7 +18,7 @@ export default function Choice(props) {
                 <p className="choice__text">{props.text}</p>
                 {props.state === 3 && (props.currentQuestion.userInput === props.text || (props.currentQuestion.capital || props.currentQuestion.country) === props.text) &&
                     <div className="answer__icon">
-                        {props.text === props.currentQuestion.capital ||  props.currentQuestion.country && props.currentQuestion.userInput ? 
+                        {props.text === (props.currentQuestion.capital ||  props.currentQuestion.country) && props.currentQuestion.userInput ? 
                         <CheckCircle size="24px"  /> :
                         <XCircle size="24px" />
                     }
