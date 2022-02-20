@@ -58,7 +58,11 @@ export default function App() {
         const randomQuestion = Math.floor(Math.random() * allData.length)
         // allData[random]--> capital, country
         let thisQuestion = allData[randomQuestion]
-        thisQuestion.allAnswers = [thisQuestion.capital]
+        if(thisQuestion.capital !== "") {
+            thisQuestion.allAnswers = [thisQuestion.capital]
+        } else {
+            let thisQuestion = allData[randomQuestion]
+        }
         thisQuestion.isFlagQuestion = false
         // for loop i < 3 -> allData[random].capital
         for (let i = 0; i < 3; i++) {
