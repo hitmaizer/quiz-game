@@ -9,7 +9,7 @@ import GameOver from './components/GameOver'
 
 
 export default function App() {
-    const [gameState, setGameState] = React.useState(2)
+    const [gameState, setGameState] = React.useState(0)
     const [allData, setAllData] = React.useState([])
     const [flagQuestions, setFlagQuestions] = React.useState([])
     const [result, setResult] = React.useState(0)
