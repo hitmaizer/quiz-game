@@ -16,12 +16,14 @@ export default function Choice(props) {
             onClick={() => props.selectAnswer(props.text, props.id)}
             style={props.style.style}>
                 <p className="choice__text">{props.text}</p>
-                {props.state === 3 && 
+                {props.state === 3 && (props.currentQuestion.userInput === props.text || (props.currentQuestion.capital || props.currentQuestion.country) === props.text) &&
                     <div className="answer__icon">
-                        {props.text === props.currentQuestion.capital || props.text === props.currentQuestion.country ? 
-                        <CheckCircle size="24px"  /> : 
+                        {props.text === props.currentQuestion.capital ||  props.currentQuestion.country && props.currentQuestion.userInput ? 
+                        <CheckCircle size="24px"  /> :
                         <XCircle size="24px" />
-                        }
+                    }
+
+                    
                          
                         
                     </div>
