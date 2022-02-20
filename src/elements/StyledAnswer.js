@@ -11,5 +11,5 @@ export default styled.button`
     width: 400px;
     height: 56px;
     cursor: pointer;
-    
+    width: 100%;
 ` 
